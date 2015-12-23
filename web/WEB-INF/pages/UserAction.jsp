@@ -1,3 +1,5 @@
+<%--suppress ALL --%>
+<%--suppress ALL --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -24,7 +26,14 @@
             border: 1px solid #030504;
             border-collapse: collapse;
         }
-
+    .modal-content{
+        margin-top: 200px;
+        width: 333px;
+    }
+    .modal-body{
+        text-align: center;
+        font-size: 18px;
+    }
         th, td {
             padding: 5px;
             text-align: center;
@@ -121,8 +130,9 @@
         </form>
     </div>
     <div id="table" style="margin-right: 66px; margin-left: -66px">
-        <div class="alert alert-success" id="aler" hidden>
-            <strong>Success </strong> Saved data...!
+        <div class="alert alert-success" id="aler" hidden style="position:absolute;left: 566px;
+         top: 52px; z-index: 100;  width: 333px; height: 50px; text-align: center;">
+            <strong>Success </strong> data saved ...!
         </div>
         <nav class="navbar navbar-default" style="margin-bottom: 0px">
             <div class="container-fluid">
@@ -176,7 +186,6 @@
             alert("Fill the all area...!");
         }
         else {
-            var notify;
             $.ajax({
                 url: "urlSaveEmployee",
                 type: "POST",
@@ -192,27 +201,37 @@
                 success: function (response) {
                     if (response.id == hideId) {
                         var allTd = $('table tbody tr#' + response.id + " td");
-                        allTd.eq(0).html(response.id);
-                        allTd.eq(1).html(response.firstName);
-                        allTd.eq(2).html(response.lastName);
-                        allTd.eq(3).html(response.mobile);
-                        allTd.eq(4).html(response.email);
-                        allTd.eq(5).html(response.state);
-                        $('#aler').fadeIn(2000).fadeOut(2000);
+                        if (response.id != undefined && $('#email').val() == response.id) {
+                            allTd.eq(0).html(response.id);
+                            allTd.eq(1).html(response.firstName);
+                            allTd.eq(2).html(response.lastName);
+                            allTd.eq(3).html(response.mobile);
+                            allTd.eq(4).html(response.email);
+                            allTd.eq(5).html(response.state);
+                            $('#aler').fadeIn(2000).fadeOut(2000);
+                        }
+                        else{
+                            alert("this email already occupied");
+                        }
                     }
                     else {
-                        var app = "'<tr id=" + response.id + ">" + response.id +
-                                "<td>" + response.id + "</td>" +
-                                "<td>" + response.firstName + "</td>" +
-                                "<td>" + response.lastName + "</td>" +
-                                "<td>" + response.mobile + "</td>" +
-                                "<td>" + response.email + "</td>" +
-                                "<td>" + response.state + "</td>" +
-                                "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + response.id + "' onclick='getEmployee(" + response.id + ")'>" + "</a>" + "</td>" +
-                                "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + response.id + "' onclick='deleteEmployee(" + response.id + ")'>" + "</a>" + "</td>" +
-                                "</tr>'";
-                        $('#tableEmployee').append(app);
-                        $('#aler').fadeIn(2000).fadeOut(2000);
+                        if (response.id != undefined) {
+                            var app = "'<tr id=" + response.id + ">" + response.id +
+                                    "<td>" + response.id + "</td>" +
+                                    "<td>" + response.firstName + "</td>" +
+                                    "<td>" + response.lastName + "</td>" +
+                                    "<td>" + response.mobile + "</td>" +
+                                    "<td>" + response.email + "</td>" +
+                                    "<td>" + response.state + "</td>" +
+                                    "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + response.id + "' onclick='getEmployee(" + response.id + ")'>" + "</a>" + "</td>" +
+                                    "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + response.id + "' onclick='deleteEmployee(" + response.id + ")'>" + "</a>" + "</td>" +
+                                    "</tr>'";
+                            $('#tableEmployee').append(app);
+                            $('#aler').fadeIn(2000).fadeOut(2000);
+                        }
+                        else{
+                            alert("this email already occupied");
+                        }
                     }
                     $('#registerMenu form')[0].reset();
                 },
@@ -220,6 +239,7 @@
                     alert("Error: " + e);
                 }
             })
+
         }
     }
     function listEmployee() {
@@ -258,7 +278,7 @@
 
     function deleteEmployee(id) {
         bootbox.confirm({
-            size: 'big',
+            size: 'small',
             message: "Are you sure…",
             callback: function (result) {
                 if (result) {
@@ -271,13 +291,6 @@
                         success: function (response) {
                             $('#' + response).remove();
                             $('#registerMenu form')[0].reset();
-//                            $('#firstName').val("");
-//                            $('#lastName').val("");
-//                            $('#mobile').val("");
-//                            $('#email').val("");
-//                            $('#password').val("");
-//                            $('#state').val("");
-//                            $('#hideId').val("");
                         },
                         error: function (error) {
                             alert("Error: " + error);
@@ -349,7 +362,6 @@
     }
 
     function getOfflineData() {
-
     }
 </script>
 </body>
