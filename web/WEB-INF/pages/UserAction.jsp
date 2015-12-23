@@ -114,8 +114,8 @@
 
             <div class="input-group" style="margin-left: 17px">
                 <div class="controls">
-                    <input type="button" style="width: 70px" value="Ok" class="btn" onclick="saveEmployee()"/>
-                    <input type="reset" style="width: 70px" value="Reset" class="btn"/>
+                    <button type="button" style="width: 70px" class="btn" onclick="saveEmployee()">Ok</button>
+                    <button type="reset" style="width: 70px" class="btn">Reset</button>
                 </div>
             </div>
         </form>
@@ -176,6 +176,7 @@
             alert("Fill the all area...!");
         }
         else {
+            var notify;
             $.ajax({
                 url: "urlSaveEmployee",
                 type: "POST",
@@ -213,13 +214,7 @@
                         $('#tableEmployee').append(app);
                         $('#aler').fadeIn(2000).fadeOut(2000);
                     }
-                    $('#firstName').val("");
-                    $('#lastName').val("");
-                    $('#mobile').val("");
-                    $('#email').val("");
-                    $('#password').val("");
-                    $('#state').val("");
-                    $('#hideId').val("");
+                    $('#registerMenu form')[0].reset();
                 },
                 error: function (e) {
                     alert("Error: " + e);
@@ -275,13 +270,14 @@
                         },
                         success: function (response) {
                             $('#' + response).remove();
-                            $('#firstName').val("");
-                            $('#lastName').val("");
-                            $('#mobile').val("");
-                            $('#email').val("");
-                            $('#password').val("");
-                            $('#state').val("");
-                            $('#hideId').val("");
+                            $('#registerMenu form')[0].reset();
+//                            $('#firstName').val("");
+//                            $('#lastName').val("");
+//                            $('#mobile').val("");
+//                            $('#email').val("");
+//                            $('#password').val("");
+//                            $('#state').val("");
+//                            $('#hideId').val("");
                         },
                         error: function (error) {
                             alert("Error: " + error);
@@ -353,6 +349,7 @@
     }
 
     function getOfflineData() {
+
     }
 </script>
 </body>
