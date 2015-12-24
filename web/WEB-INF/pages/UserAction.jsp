@@ -201,7 +201,7 @@
                 success: function (response) {
                     if (response.id == hideId) {
                         var allTd = $('table tbody tr#' + response.id + " td");
-                        if (response.id != undefined && $('#email').val() == response.id) {
+                        if (response.id != undefined) {
                             allTd.eq(0).html(response.id);
                             allTd.eq(1).html(response.firstName);
                             allTd.eq(2).html(response.lastName);
@@ -243,6 +243,7 @@
         }
     }
     function listEmployee() {
+        $('table td').remove() ;
         var firstName = $('#firstName').val();
         var lastName = $('#lastName').val();
         var mobile = $('#mobile').val();
@@ -256,6 +257,7 @@
             success: function (response) {
                 var obj = JSON.parse(response);
                 $.each(obj, function (key, value) {
+                    console.log(key);
                             var app = "'<tr id=" + value.id + ">" + value.id +
                                     "<td>" + value.id + "</td>" +
                                     "<td>" + value.firstName + "</td>" +
@@ -337,7 +339,7 @@
                 success: function (result) {
                     var obj = JSON.parse(result);
                     console.log(obj);
-                    $('td').remove();
+                    $('table td').remove();
                     $.each(obj, function (key, value) {
                         var app = "'<tr id=" + value.id + ">" + value.id +
                                 "<td>" + value.id + "</td>" +
@@ -362,6 +364,7 @@
     }
 
     function getOfflineData() {
+
     }
 </script>
 </body>
