@@ -73,7 +73,6 @@
         <h4>
             <b>REGISTRATION FORM</b>
         </h4>
-
         <form>
             <input type="text" id="hideId" name="hideId" hidden>
 
@@ -130,6 +129,11 @@
             </div>
         </form>
     </div>
+    <div id="load" style="margin-right: 66px; margin-left: -66px">
+        <div id="load"  style="position:absolute; left: 566px;
+         top: 52px; z-index: 101;  width: 333px; height: 50px; text-align: center;">
+            <img src="assets/images/loading1.gif">
+        </div>
     <div id="table" style="margin-right: 66px; margin-left: -66px">
         <div class="alert alert-success" id="aler" hidden style="position:absolute;left: 566px;
          top: 52px; z-index: 100;  width: 333px; height: 50px; text-align: center;">
@@ -273,7 +277,8 @@
                                     "</tr>'";
                             $('#tableEmployee').append(app);
                         }
-                );
+                )
+                console.log("data online...");
             },
             error: function (error) {
                 alert(error);
@@ -294,8 +299,10 @@
                             id: id
                         },
                         success: function (response) {
-                            data.delete(response);
-                            console.log(data.has(response));
+                           data.forEach(function (value, key) {
+                               if(key == response)
+                               data.delete(key);
+                           });
                             $('#' + response).remove();
                             $('#registerMenu form')[0].reset();
                         },
