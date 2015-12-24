@@ -1,5 +1,3 @@
-<%--suppress ALL --%>
-<%--suppress ALL --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -26,14 +24,17 @@
             border: 1px solid #030504;
             border-collapse: collapse;
         }
-    .modal-content{
-        margin-top: 200px;
-        width: 333px;
-    }
-    .modal-body{
-        text-align: center;
-        font-size: 18px;
-    }
+
+        .modal-content {
+            margin-top: 200px;
+            width: 333px;
+        }
+
+        .modal-body {
+            text-align: center;
+            font-size: 18px;
+        }
+
         th, td {
             padding: 5px;
             text-align: center;
@@ -146,7 +147,7 @@
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group" style="margin-left: 750px">
                             <input type="text" class="form-control" placeholder="Search" id="search"
-                                   autocomplete="off" oninput="getOnlineData()">
+                                   autocomplete="off" oninput="getOfflineData()">
                         </div>
                     </form>
                 </div>
@@ -208,9 +209,10 @@
                             allTd.eq(3).html(response.mobile);
                             allTd.eq(4).html(response.email);
                             allTd.eq(5).html(response.state);
+                            data.set(response.id, response);
                             $('#aler').fadeIn(2000).fadeOut(2000);
                         }
-                        else{
+                        else {
                             alert("this email already occupied");
                         }
                     }
@@ -227,9 +229,10 @@
                                     "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + response.id + "' onclick='deleteEmployee(" + response.id + ")'>" + "</a>" + "</td>" +
                                     "</tr>'";
                             $('#tableEmployee').append(app);
+                            data.set(response.id, response);
                             $('#aler').fadeIn(2000).fadeOut(2000);
                         }
-                        else{
+                        else {
                             alert("this email already occupied");
                         }
                     }
@@ -243,7 +246,7 @@
         }
     }
     function listEmployee() {
-        $('table td').remove() ;
+        $('table td').remove();
         var firstName = $('#firstName').val();
         var lastName = $('#lastName').val();
         var mobile = $('#mobile').val();
@@ -257,7 +260,7 @@
             success: function (response) {
                 var obj = JSON.parse(response);
                 $.each(obj, function (key, value) {
-                    console.log(key);
+                            data.set(value.id, value);
                             var app = "'<tr id=" + value.id + ">" + value.id +
                                     "<td>" + value.id + "</td>" +
                                     "<td>" + value.firstName + "</td>" +
@@ -291,6 +294,8 @@
                             id: id
                         },
                         success: function (response) {
+                            data.delete(response);
+                            console.log(data.has(response));
                             $('#' + response).remove();
                             $('#registerMenu form')[0].reset();
                         },
@@ -328,6 +333,7 @@
     }
 
     function getOnlineData() {
+        $('table td').remove();
         var text = $('#search').val();
         if (text.length > 0) {
             $.ajax({
@@ -338,8 +344,6 @@
                 },
                 success: function (result) {
                     var obj = JSON.parse(result);
-                    console.log(obj);
-                    $('table td').remove();
                     $.each(obj, function (key, value) {
                         var app = "'<tr id=" + value.id + ">" + value.id +
                                 "<td>" + value.id + "</td>" +
@@ -359,12 +363,63 @@
             })
         }
         else {
-            listEmployee();
+            getOfflineData();
         }
     }
 
     function getOfflineData() {
-
+        $('table td').remove();
+        var tex = $('#search').val();
+        var bol = false;
+        if (tex.length > 0) {
+            data.forEach(function (value, key) {
+                var searchText = data.get(key);
+                var firstName = searchText.firstName;
+                var lastName = searchText.lastName;
+                var mobile = searchText.mobile;
+                var email = searchText.email;
+                var state = searchText.state;
+                if (firstName.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                        || lastName.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                        || mobile.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                        || email.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                        || state.toLowerCase().indexOf(tex.toLowerCase()) > -1) {
+                    bol = true;
+                    var app = "'<tr id=" + value.id + ">" + value.id +
+                            "<td>" + value.id + "</td>" +
+                            "<td>" + value.firstName + "</td>" +
+                            "<td>" + value.lastName + "</td>" +
+                            "<td>" + value.mobile + "</td>" +
+                            "<td>" + value.email + "</td>" +
+                            "<td>" + value.state + "</td>" +
+                            "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                            "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                            "</tr>'";
+                    $('#tableEmployee').append(app);
+                    console.log("offline data...");
+                }
+            });
+            if (!bol) {
+                getOnlineData();
+                console.log("data online");
+            }
+        }
+        else {
+            data.forEach(function (value, key) {
+                var app = "'<tr id=" + value.id + ">" + value.id +
+                        "<td>" + value.id + "</td>" +
+                        "<td>" + value.firstName + "</td>" +
+                        "<td>" + value.lastName + "</td>" +
+                        "<td>" + value.mobile + "</td>" +
+                        "<td>" + value.email + "</td>" +
+                        "<td>" + value.state + "</td>" +
+                        "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                        "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                        "</tr>'";
+                $('#tableEmployee').append(app);
+                console.log("offline data...");
+            });
+        }
     }
 </script>
 </body>
