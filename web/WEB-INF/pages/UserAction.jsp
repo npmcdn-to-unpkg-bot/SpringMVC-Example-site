@@ -73,6 +73,7 @@
         <h4>
             <b>REGISTRATION FORM</b>
         </h4>
+
         <form>
             <input type="text" id="hideId" name="hideId" hidden>
 
@@ -129,50 +130,54 @@
             </div>
         </form>
     </div>
-    <div id="load" style="margin-right: 66px; margin-left: -66px">
-        <div id="load"  style="position:absolute; left: 566px;
-         top: 52px; z-index: 101;  width: 333px; height: 50px; text-align: center;">
-            <img src="assets/images/loading1.gif">
+        <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;
+      text-align: center;height: 100%; background-color: black; opacity: 0.7;" id="load">
+            <img src="assets/images/loading-img.gif"  style="margin-left: 133px; margin-top: 234px;">
         </div>
-    <div id="table" style="margin-right: 66px; margin-left: -66px">
-        <div class="alert alert-success" id="aler" hidden style="position:absolute;left: 566px;
+        <div id="table" style="margin-right: 66px; margin-left: -66px">
+            <div class="alert alert-success" id="aler" hidden style="position:absolute;left: 566px;
          top: 52px; z-index: 100;  width: 333px; height: 50px; text-align: center;">
-            <strong>Success </strong> data saved ...!
-        </div>
-        <nav class="navbar navbar-default" style="margin-bottom: 0px">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-2" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group" style="margin-left: 750px">
-                            <input type="text" class="form-control" placeholder="Search" id="search"
-                                   autocomplete="off" oninput="getOfflineData()">
-                        </div>
-                    </form>
-                </div>
+                <strong>Success </strong> data saved ...!
             </div>
-        </nav>
-        <table id="tableEmployee" class="table table-striped table-bordered table-hover dataTable no-footer">
-            <tr class="gradeA even">
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Mobile</th>
-                <th>Email</th>
-                <th>State</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </table>
-        <br>
-        <input type="button" id="addButton" name="Add" value="Add User" class="btn">
+            <nav class="navbar navbar-default" style="margin-bottom: 0px">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-2" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group" style="margin-left: 750px">
+                                <input type="text" class="form-control" placeholder="Search" id="search"
+                                       autocomplete="off" oninput="getOfflineData()">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <table id="tableEmployee" class="table table-striped table-bordered table-hover dataTable no-footer">
+                <thead>
+                <tr class="gradeA even">
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>State</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <br>
+            <input type="button" id="addButton" name="Add" value="Add User" class="btn">
+        </div>
     </div>
-</div>
 <script>
     var data = new Map();
     $('#addButton').click(function () {
@@ -191,6 +196,7 @@
             alert("Fill the all area...!");
         }
         else {
+            $('#load').show();
             $.ajax({
                 url: "urlSaveEmployee",
                 type: "POST",
@@ -215,9 +221,11 @@
                             allTd.eq(5).html(response.state);
                             data.set(response.id, response);
                             $('#aler').fadeIn(2000).fadeOut(2000);
+                            $('#load').hide();
                         }
                         else {
                             alert("this email already occupied");
+                            $('#load').hide();
                         }
                     }
                     else {
@@ -232,12 +240,14 @@
                                     "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + response.id + "' onclick='getEmployee(" + response.id + ")'>" + "</a>" + "</td>" +
                                     "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + response.id + "' onclick='deleteEmployee(" + response.id + ")'>" + "</a>" + "</td>" +
                                     "</tr>'";
-                            $('#tableEmployee').append(app);
+                            $('#tableEmployee tbody').append(app);
                             data.set(response.id, response);
                             $('#aler').fadeIn(2000).fadeOut(2000);
+                            $('#load').hide();
                         }
                         else {
                             alert("this email already occupied");
+                            $('#load').hide();
                         }
                     }
                     $('#registerMenu form')[0].reset();
@@ -246,18 +256,17 @@
                     alert("Error: " + e);
                 }
             })
-
         }
     }
     function listEmployee() {
-        $('table td').remove();
+        $('table tbody tr').remove();
         var firstName = $('#firstName').val();
         var lastName = $('#lastName').val();
         var mobile = $('#mobile').val();
         var email = $('#email').val();
         var password = $('#password').val();
         var state = $('#state').val();
-
+        $('#load').show();
         $.ajax({
             url: 'urlListEmployee',
             data: 'POST',
@@ -275,18 +284,21 @@
                                     "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                     "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                     "</tr>'";
-                            $('#tableEmployee').append(app);
+                             $('#tableEmployee tbody').append(app);
                         }
-                )
+                );
+                $('#load').hide();
                 console.log("data online...");
             },
             error: function (error) {
                 alert(error);
+                $('#load').hide();
             }
         })
     }
 
     function deleteEmployee(id) {
+        $('#load').show();
         bootbox.confirm({
             size: 'small',
             message: "Are you sure…",
@@ -299,25 +311,29 @@
                             id: id
                         },
                         success: function (response) {
-                           data.forEach(function (value, key) {
-                               if(key == response)
-                               data.delete(key);
-                           });
+                            data.forEach(function (value, key) {
+                                if (key == response)
+                                    data.delete(key);
+                            });
+                            console.log(response);
                             $('#' + response).remove();
+                            $('#load').hide();
                             $('#registerMenu form')[0].reset();
                         },
                         error: function (error) {
                             alert("Error: " + error);
+                            $('#load').hide();
                         }
                     })
                 }
                 else {
-                    // todo something...
+                    $('#load').hide();
                 }
             }
         });
     }
     function getEmployee(id) {
+        $('#load').show();
         $.ajax({
             url: 'urlGetEmployee',
             type: 'POST',
@@ -332,17 +348,22 @@
                 $('#mobile').val(obj.mobile);
                 $('#email').val(obj.email);
                 $('#state').val(obj.state);
+
+                $('#load').hide();
             },
             error: function (error) {
                 alert("Error: " + error);
+                $('#load').hide();
             }
         });
     }
 
     function getOnlineData() {
-        $('table td').remove();
+        $('table tbody tr').remove();
         var text = $('#search').val();
+        var test = false;
         if (text.length > 0) {
+            $('#load').show();
             $.ajax({
                 url: 'getData',
                 type: 'POST',
@@ -362,12 +383,19 @@
                                 "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                 "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                 "</tr>'";
-                        $('#tableEmployee').append(app);
+                        $('#tableEmployee tbody').append(app);
+                        test = true;
+                        $('#load').hide();
                     })
                 },
                 error: function (error) {
+                    alert('error ' + error);
+                    $('#load').hide();
                 }
-            })
+            });
+            if(!test){
+               $('#load').hide();
+            }
         }
         else {
             getOfflineData();
@@ -375,10 +403,11 @@
     }
 
     function getOfflineData() {
-        $('table td').remove();
+        $('table tbody tr').remove();
         var tex = $('#search').val();
         var bol = false;
         if (tex.length > 0) {
+            $('#load').show();
             data.forEach(function (value, key) {
                 var searchText = data.get(key);
                 var firstName = searchText.firstName;
@@ -402,7 +431,8 @@
                             "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                             "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                             "</tr>'";
-                    $('#tableEmployee').append(app);
+                    $('#tableEmployee tbody').append(app);
+                    $('#load').hide();
                     console.log("offline data...");
                 }
             });
@@ -412,6 +442,8 @@
             }
         }
         else {
+            $('#load').show();
+            $('table tbody tr').remove();
             data.forEach(function (value, key) {
                 var app = "'<tr id=" + value.id + ">" + value.id +
                         "<td>" + value.id + "</td>" +
@@ -423,7 +455,8 @@
                         "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                         "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                         "</tr>'";
-                $('#tableEmployee').append(app);
+                $('#tableEmployee tbody').append(app);
+                $('#load').hide();
                 console.log("offline data...");
             });
         }
@@ -431,3 +464,6 @@
 </script>
 </body>
 </html>
+<%--
+sarvar.fayzulaev@finnetlimited.com
+--%>
