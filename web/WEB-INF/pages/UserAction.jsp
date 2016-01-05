@@ -65,6 +65,41 @@
         #addButton {
             float: right;
         }
+
+        .page-button {
+            box-sizing: border-box;
+            display: inline-block;
+            min-width: 1.5em;
+            padding: 0.5em 1em;
+            margin-left: 2px;
+            text-align: center;
+            text-decoration: none !important;
+            cursor: pointer;
+            color: #333 !important;
+            border-radius: 15px;
+        }
+
+        .page-button-current {
+        }
+
+        .page-button:hover {
+            color: white !important;
+            border: 1px solid #111;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111));
+            background: -webkit-linear-gradient(top, #585858 0%, #111 100%);
+            text-decoration: underline;
+            background: linear-gradient(to bottom, #585858 0%, #111 100%);
+        }
+
+        a {
+            cursor: pointer;
+            color: #3174c7;
+            text-decoration: none;
+        }
+
+        .form-control {
+            width: 77px;
+        }
     </style>
 </head>
 <body onload="listEmployee()">
@@ -130,54 +165,71 @@
             </div>
         </form>
     </div>
-        <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;
+    <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;
       text-align: center;height: 100%; background-color: black; opacity: 0.7;" id="load">
-            <img src="assets/images/loading-img.gif"  style="margin-left: 133px; margin-top: 234px;">
-        </div>
-        <div id="table" style="margin-right: 66px; margin-left: -66px">
-            <div class="alert alert-success" id="aler" hidden style="position:absolute;left: 566px;
+        <img src="assets/images/loading-img.gif" style="margin-left: 133px; margin-top: 234px;">
+    </div>
+    <div id="table" style="margin-right: 66px; margin-left: -66px">
+        <div class="alert alert-success" id="aler" hidden style="position:absolute;left: 566px;
          top: 52px; z-index: 100;  width: 333px; height: 50px; text-align: center;">
-                <strong>Success </strong> data saved ...!
-            </div>
-            <nav class="navbar navbar-default" style="margin-bottom: 0px">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target="#bs-example-navbar-collapse-2" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                        <form class="navbar-form navbar-left" role="search">
-                            <div class="form-group" style="margin-left: 750px">
-                                <input type="text" class="form-control" placeholder="Search" id="search"
-                                       autocomplete="off" oninput="getOfflineData()">
-                            </div>
-                        </form>
-                    </div>
+            <strong>Success </strong> data saved ...!
+        </div>
+        <nav class="navbar navbar-default" style="margin-bottom: 0">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-2" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
                 </div>
-            </nav>
-            <table id="tableEmployee" class="table table-striped table-bordered table-hover dataTable no-footer">
-                <thead>
-                <tr class="gradeA even">
-                    <th>Id</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Mobile</th>
-                    <th>Email</th>
-                    <th>State</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                </thead>
-                <tbody>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" style="display: inline">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <select class="form-control" id="mySelect">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>50</option>
+                                <option>100</option>
 
-                </tbody>
-            </table>
-            <br>
+                                <input type="text" class="form-control" placeholder="Search" id="search"
+                                       style="margin-left: 750px"
+                                       autocomplete="off" oninput="getOfflineData()">
+                            </select>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <table id="tableEmployee" class="table table-striped table-bordered table-hover dataTable no-footer">
+            <thead>
+            <tr class="gradeA even">
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>State</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div class="div-page">
+            <a class="page-button" id="prev">Previous</a>
+            <%--<a class="page-button">1</a>--%>
+            <%--<a class="page-button">2</a>--%>
+            <%--<a class="page-button">3</a>--%>
+            <a class="page-button" id="next">Next</a>
+
             <input type="button" id="addButton" name="Add" value="Add User" class="btn">
         </div>
+
     </div>
+</div>
 <script>
     var data = new Map();
     $('#addButton').click(function () {
@@ -272,6 +324,7 @@
             data: 'POST',
             success: function (response) {
                 var obj = JSON.parse(response);
+                var count = 0;
                 $.each(obj, function (key, value) {
                             data.set(value.id, value);
                             var app = "'<tr id=" + value.id + ">" + value.id +
@@ -284,9 +337,14 @@
                                     "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                     "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                     "</tr>'";
-                             $('#tableEmployee tbody').append(app);
-                        }
-                );
+                    $('#tableEmployee tbody').append(app);
+                    count++;
+                });
+                var divide = $('#mySelect option:selected').text();
+                for (var i = 1; i < count / divide + 1; i++) {
+                    var app = "<a class='page-button'>" + i + "</a>";
+                    $('#next').before(app);
+                }
                 $('#load').hide();
                 console.log("data online...");
             },
@@ -393,8 +451,8 @@
                     $('#load').hide();
                 }
             });
-            if(!test){
-               $('#load').hide();
+            if (!test) {
+                $('#load').hide();
             }
         }
         else {
