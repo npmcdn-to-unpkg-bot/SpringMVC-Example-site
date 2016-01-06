@@ -191,12 +191,10 @@
                                 <option>50</option>
                                 <option>100</option>
 
-                                <b class="text-info" id=""></b>
                                 <input type="text" class="form-control" placeholder="Search" id="search"
                                        style="margin-left: 680px"
                                        autocomplete="off" oninput="getOfflineData()">
                             </select>
-
                         </div>
                     </form>
                 </div>
@@ -443,7 +441,10 @@
                 },
                 success: function (result) {
                     var obj = JSON.parse(result);
+                    var num = 0;
                     $.each(obj, function (key, value) {
+                        var tex = $('#mySelect option:selected').text();
+//                        if(tex > )
                         var app = "'<tr id=" + value.id + ">" + value.id +
                                 "<td>" + value.id + "</td>" +
                                 "<td>" + value.firstName + "</td>" +
@@ -454,6 +455,7 @@
                                 "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                 "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                 "</tr>'";
+                        num++;
                         $('#tableEmployee tbody').append(app);
                         test = true;
                         $('#load').hide();
