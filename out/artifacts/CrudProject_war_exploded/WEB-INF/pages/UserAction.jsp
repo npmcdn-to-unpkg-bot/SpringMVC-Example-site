@@ -110,7 +110,7 @@
         </h4>
 
         <form>
-            <input type="text" id="hideId" name="hideId">
+            <input type="text" id="hideId" name="hideId" hidden>
 
             <div class="input-group">
                 First Name
