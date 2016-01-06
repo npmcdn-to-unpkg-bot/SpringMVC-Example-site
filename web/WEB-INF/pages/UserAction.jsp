@@ -184,15 +184,16 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" style="display: inline">
                     <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
+                        <div class="form-group" style="display: inline-flex">
                             <select class="form-control" id="mySelect">
                                 <option>5</option>
                                 <option>10</option>
                                 <option>50</option>
                                 <option>100</option>
 
+                                <b class="text-info" id=""></b>
                                 <input type="text" class="form-control" placeholder="Search" id="search"
-                                       style="margin-left: 750px"
+                                       style="margin-left: 680px"
                                        autocomplete="off" oninput="getOfflineData()">
                             </select>
 
@@ -214,16 +215,13 @@
                 <th>Delete</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="tbodyId">
             </tbody>
         </table>
 
         <div class="div-page">
-            <a class="page-button" id="prev">Previous</a>
-            <%--<a class="page-button">1</a>--%>
-            <%--<a class="page-button">2</a>--%>
-            <%--<a class="page-button">3</a>--%>
-            <a class="page-button" id="next">Next</a>
+            <a class="page-button other" id="prev">Previous</a>
+            <a class="page-button other" id="next">Next</a>
 
             <input type="button" id="addButton" name="Add" value="Add User" class="btn">
         </div>
@@ -295,6 +293,13 @@
                             $('#tableEmployee tbody').append(app);
                             data.set(response.id, response);
                             $('#aler').fadeIn(2000).fadeOut(2000);
+                            $('.page').remove();
+                            var countt = $('#tableEmployee tbody').children().length;
+                            var divided = $('#mySelect option:selected').text();
+                            for (var k = 1; k < countt / divided + 1; k++) {
+                                var appp = "<a class='page-button page'>" + k + "</a>";
+                                $('#next').before(appp);
+                            }
                             $('#load').hide();
                         }
                         else {
@@ -324,25 +329,25 @@
             data: 'POST',
             success: function (response) {
                 var obj = JSON.parse(response);
-                var count = 0;
                 $.each(obj, function (key, value) {
-                            data.set(value.id, value);
-                            var app = "'<tr id=" + value.id + ">" + value.id +
-                                    "<td>" + value.id + "</td>" +
-                                    "<td>" + value.firstName + "</td>" +
-                                    "<td>" + value.lastName + "</td>" +
-                                    "<td>" + value.mobile + "</td>" +
-                                    "<td>" + value.email + "</td>" +
-                                    "<td>" + value.state + "</td>" +
-                                    "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
-                                    "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
-                                    "</tr>'";
+                    data.set(value.id, value);
+                    var app = "'<tr id=" + value.id + ">" + value.id +
+                            "<td>" + value.id + "</td>" +
+                            "<td>" + value.firstName + "</td>" +
+                            "<td>" + value.lastName + "</td>" +
+                            "<td>" + value.mobile + "</td>" +
+                            "<td>" + value.email + "</td>" +
+                            "<td>" + value.state + "</td>" +
+                            "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                            "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                            "</tr>'";
                     $('#tableEmployee tbody').append(app);
-                    count++;
                 });
+                var count = $('#tableEmployee tbody').children().length;
                 var divide = $('#mySelect option:selected').text();
+                $('.page').remove();
                 for (var i = 1; i < count / divide + 1; i++) {
-                    var app = "<a class='page-button'>" + i + "</a>";
+                    var app = "<a class='page-button page'>" + i + "</a>";
                     $('#next').before(app);
                 }
                 $('#load').hide();
@@ -376,6 +381,13 @@
                             console.log(response);
                             $('#' + response).remove();
                             $('#load').hide();
+                            $('.page').remove();
+                            var count = $('#tableEmployee tbody').children().length;
+                            var divide = $('#mySelect option:selected').text();
+                            for (var i = 1; i < count / divide + 1; i++) {
+                                var app = "<a class='page-button page'>" + i + "</a>";
+                                $('#next').before(app);
+                            }
                             $('#registerMenu form')[0].reset();
                         },
                         error: function (error) {
@@ -420,6 +432,7 @@
         $('table tbody tr').remove();
         var text = $('#search').val();
         var test = false;
+        $('.page').remove();
         if (text.length > 0) {
             $('#load').show();
             $.ajax({
@@ -444,7 +457,13 @@
                         $('#tableEmployee tbody').append(app);
                         test = true;
                         $('#load').hide();
-                    })
+                    });
+                    var count = $('#tableEmployee tbody').children().length;
+                    var divide = $('#mySelect option:selected').text();
+                    for (var i = 1; i < count / divide + 1; i++) {
+                        var appp = "<a class='page-button page'>" + i + "</a>";
+                        $('#next').before(appp);
+                    }
                 },
                 error: function (error) {
                     alert('error ' + error);
@@ -490,6 +509,14 @@
                             "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                             "</tr>'";
                     $('#tableEmployee tbody').append(app);
+
+                    $('.page').remove();
+                    var count = $('#tableEmployee tbody').children().length;
+                    var divide = $('#mySelect option:selected').text();
+                    for (var i = 1; i < count / divide + 1; i++) {
+                        var appp = "<a class='page-button page'>" + i + "</a>";
+                        $('#next').before(appp);
+                    }
                     $('#load').hide();
                     console.log("offline data...");
                 }
@@ -514,6 +541,13 @@
                         "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                         "</tr>'";
                 $('#tableEmployee tbody').append(app);
+                $('.page').remove();
+                var count = $('#tableEmployee tbody').children().length;
+                var divide = $('#mySelect option:selected').text();
+                for (var i = 1; i < count / divide + 1; i++) {
+                    var appp = "<a class='page-button page'>" + i + "</a>";
+                    $('#next').before(appp);
+                }
                 $('#load').hide();
                 console.log("offline data...");
             });
