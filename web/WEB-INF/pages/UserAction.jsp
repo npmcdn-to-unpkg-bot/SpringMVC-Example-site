@@ -110,7 +110,7 @@
         </h4>
 
         <form>
-            <input type="text" id="hideId" name="hideId" hidden>
+            <input type="text" id="hideId" name="hideId">
 
             <div class="input-group">
                 First Name
@@ -258,6 +258,8 @@
                     state: state
                 },
                 success: function (response) {
+                    alert('hideid = ' + hideId);
+                    alert('res.id = ' + response.id);
                     if (response.id == hideId) {
                         var allTd = $('table tbody tr#' + response.id + " td");
                         if (response.id != undefined) {
@@ -272,7 +274,7 @@
                             $('#load').hide();
                         }
                         else {
-                            alert("this email already occupied");
+                            alert("this email already occupied 10");
                             $('#load').hide();
                         }
                     }
@@ -301,7 +303,7 @@
                             $('#load').hide();
                         }
                         else {
-                            alert("this email already occupied");
+                            alert("this email already occupied 11");
                             $('#load').hide();
                         }
                     }
@@ -441,10 +443,7 @@
                 },
                 success: function (result) {
                     var obj = JSON.parse(result);
-                    var num = 0;
                     $.each(obj, function (key, value) {
-                        var tex = $('#mySelect option:selected').text();
-//                        if(tex > )
                         var app = "'<tr id=" + value.id + ">" + value.id +
                                 "<td>" + value.id + "</td>" +
                                 "<td>" + value.firstName + "</td>" +
@@ -455,7 +454,6 @@
                                 "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                 "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
                                 "</tr>'";
-                        num++;
                         $('#tableEmployee tbody').append(app);
                         test = true;
                         $('#load').hide();
