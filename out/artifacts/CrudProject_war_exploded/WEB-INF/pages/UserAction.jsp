@@ -483,40 +483,45 @@
         $('table tbody tr').remove();
         var tex = $('#search').val();
         var bol = false;
+        var countt = $('#tableEmployee tbody').children().length;
+        var divided = $('#mySelect option:selected').text();
         if (tex.length > 0) {
             $('#load').show();
+            var c = 0;
             data.forEach(function (value, key) {
-                var searchText = data.get(key);
-                var firstName = searchText.firstName;
-                var lastName = searchText.lastName;
-                var mobile = searchText.mobile;
-                var email = searchText.email;
-                var state = searchText.state;
-                if (firstName.toLowerCase().indexOf(tex.toLowerCase()) > -1
-                        || lastName.toLowerCase().indexOf(tex.toLowerCase()) > -1
-                        || mobile.toLowerCase().indexOf(tex.toLowerCase()) > -1
-                        || email.toLowerCase().indexOf(tex.toLowerCase()) > -1
-                        || state.toLowerCase().indexOf(tex.toLowerCase()) > -1) {
-                    bol = true;
-                    var app = "'<tr id=" + value.id + ">" + value.id +
-                            "<td>" + value.id + "</td>" +
-                            "<td>" + value.firstName + "</td>" +
-                            "<td>" + value.lastName + "</td>" +
-                            "<td>" + value.mobile + "</td>" +
-                            "<td>" + value.email + "</td>" +
-                            "<td>" + value.state + "</td>" +
-                            "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
-                            "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
-                            "</tr>'";
-                    $('#tableEmployee tbody').append(app);
-
-                    $('.page').remove();
-                    var count = $('#tableEmployee tbody').children().length;
-                    var divide = $('#mySelect option:selected').text();
-                    for (var i = 1; i < count / divide + 1; i++) {
-                        var appp = "<a class='page-button page'>" + i + "</a>";
-                        $('#next').before(appp);
+                if (c <= divided) {
+                    var searchText = data.get(key);
+                    var firstName = searchText.firstName;
+                    var lastName = searchText.lastName;
+                    var mobile = searchText.mobile;
+                    var email = searchText.email;
+                    var state = searchText.state;
+                    if (firstName.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                            || lastName.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                            || mobile.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                            || email.toLowerCase().indexOf(tex.toLowerCase()) > -1
+                            || state.toLowerCase().indexOf(tex.toLowerCase()) > -1) {
+                        bol = true;
+                        var app = "'<tr id=" + value.id + ">" + value.id +
+                                "<td>" + value.id + "</td>" +
+                                "<td>" + value.firstName + "</td>" +
+                                "<td>" + value.lastName + "</td>" +
+                                "<td>" + value.mobile + "</td>" +
+                                "<td>" + value.email + "</td>" +
+                                "<td>" + value.state + "</td>" +
+                                "<td>" + "<a class='glyphicon glyphicon-pencil' href='#' id='" + value.id + "' onclick='getEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                                "<td>" + "<a class='glyphicon glyphicon-remove' href='#' id='" + value.id + "' onclick='deleteEmployee(" + value.id + ")'>" + "</a>" + "</td>" +
+                                "</tr>'";
+                        $('#tableEmployee tbody').append(app);
+                        c++;
                     }
+                }
+                $('.page').remove();
+                var count = $('#tableEmployee tbody').children().length;
+                var divide = $('#mySelect option:selected').text();
+                for (var i = 1; i < count / divide + 1; i++) {
+                    var appp = "<a class='page-button page'>" + i + "</a>";
+                    $('#next').before(appp);
                     $('#load').hide();
                     console.log("offline data...");
                 }
@@ -562,6 +567,7 @@
             var appp = "<a class='page-button page'>" + i + "</a>";
             $('#next').before(appp);
         }
+        getOfflineData();
     })
 </script>
 </body>
