@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de3827a3-857c-4bd2-9e9f-73119548b7fc" name="Default" comment="change">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/sa.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/qq.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/blog.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/blog.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/contact.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/contact.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/course_detail.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/course_detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/courses.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/courses.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/event_single.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/event_single.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/events.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/events.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/faq.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/faq.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/register.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/shortcodes.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/shortcodes.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/students.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/students.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/terms.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/terms.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/css/jquery.countdown.css" afterPath="$PROJECT_DIR$/web/assets/css/jquery.countdown.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/css/style.css" afterPath="$PROJECT_DIR$/web/assets/css/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/qq.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/kk.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrudProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qq.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/qq.jsp">
+      <file leaf-file-name="kk.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/kk.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4753521">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5070422">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,6 +70,7 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/pages/UserAction.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/pages/sa.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/pages/qq.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/pages/kk.jsp" />
       </list>
     </option>
   </component>
@@ -717,7 +706,7 @@
       <option name="number" value="Default" />
       <updated>1452099859690</updated>
       <workItem from="1452099866119" duration="151000" />
-      <workItem from="1452100026061" duration="1054000" />
+      <workItem from="1452100026061" duration="1311000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1452100409340</created>
@@ -735,7 +724,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1205000" />
+    <option name="totallyTimeSpent" value="1462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1364" height="741" extended-state="4" />
@@ -803,10 +792,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/qq.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/kk.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4753521">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5070422">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
