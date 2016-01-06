@@ -169,7 +169,7 @@
       text-align: center;height: 100%; background-color: black; opacity: 0.7;" id="load">
         <img src="assets/images/loading-img.gif" style="margin-left: 133px; margin-top: 234px;">
     </div>
-    <div id="table" style="margin-right: 66px; margin-left: -66px">
+    <div id="table" style="margin-right: 66px; margin-left: -66px; padding-bottom: 100px;">
         <div class="alert alert-success" id="aler" hidden style="position:absolute;left: 566px;
          top: 52px; z-index: 100;  width: 333px; height: 50px; text-align: center;">
             <strong>Success </strong> data saved ...!
@@ -258,8 +258,8 @@
                     state: state
                 },
                 success: function (response) {
-                    alert('hideid = ' + hideId);
-                    alert('res.id = ' + response.id);
+//                    alert('hideid = ' + hideId);
+//                    alert('res.id = ' + response.id);
                     if (response.id == hideId) {
                         var allTd = $('table tbody tr#' + response.id + " td");
                         if (response.id != undefined) {
@@ -553,6 +553,16 @@
             });
         }
     }
+
+    $('#mySelect').change(function () {
+        $('.page').remove();
+        var count = $('#tableEmployee tbody').children().length;
+        var divide = $('#mySelect option:selected').text();
+        for (var i = 1; i < count / divide + 1; i++) {
+            var appp = "<a class='page-button page'>" + i + "</a>";
+            $('#next').before(appp);
+        }
+    })
 </script>
 </body>
 </html>
