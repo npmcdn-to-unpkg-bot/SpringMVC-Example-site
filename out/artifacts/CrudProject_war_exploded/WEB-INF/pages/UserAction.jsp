@@ -514,7 +514,7 @@
                                 "</tr>'";
                         $('#tableEmployee tbody').append(app);
                         c++;
-                    }
+                    } 
                 }
                 $('.page').remove();
                 var count = $('#tableEmployee tbody').children().length;

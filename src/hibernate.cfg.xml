@@ -18,7 +18,7 @@
             postgres
         </property>
         <property name="connection.password">
-            1001
+            10
         </property>
         <mapping class="Model.Employee"/>
     </session-factory>
