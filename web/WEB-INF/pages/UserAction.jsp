@@ -572,6 +572,3 @@
 </script>
 </body>
 </html>
-<%--
-sarvar.fayzulaev@finnetlimited.com
---%>
