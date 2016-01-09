@@ -303,7 +303,7 @@
                             $('#load').hide();
                         }
                         else {
-                            alert("this email already occupied 11");
+                            alert("this email already occupied ");
                             $('#load').hide();
                         }
                     }
