@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.portlet.mvc.annotation.DefaultAnnotationHandlerMapping;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/employee")
 public class EmployeeController {
+
     @RequestMapping(value = "/urlSaveEmployee", method = RequestMethod.POST)
     @ResponseBody
     public Employee saveEmployee(@RequestParam(value = "hideId") String hideId, @RequestParam(value = "firstName") String firstName, @RequestParam(value = "lastName") String lastName,
@@ -44,7 +46,7 @@ public class EmployeeController {
         return gson.toJson(list, list.getClass());
     }
 
-    @RequestMapping(value = "/urlDeleteEmployee", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/urlDeleteEmployee", method = RequestMethod.POST)
     @ResponseBody
     public String deleteEmployee(@RequestParam(value = "id") String id) {
         EmployeeDao dao = new EmployeeDao();
@@ -52,8 +54,10 @@ public class EmployeeController {
         return id;
     }
 
-    @RequestMapping(value = "/urlGetEmployee", method = RequestMethod.GET)
+    @RequestMapping(value = "/urlGetEmployee", method = RequestMethod.POST)
     @ResponseBody
+
+
     public String urlGetEmployee(@RequestParam(value = "id") Integer id) {
         EmployeeDao dao = new EmployeeDao();
         Employee employee = dao.getEmployee(id);
@@ -61,7 +65,7 @@ public class EmployeeController {
         return gson.toJson(employee, employee.getClass());
     }
 
-    @RequestMapping(value = "/getData", method = RequestMethod.GET)
+    @RequestMapping(value = "/getData", method = RequestMethod.POST)
     @ResponseBody
     public String getData(@RequestParam(value = "text") String text) {
         List list = new EmployeeDao().getDataList(text);
@@ -71,7 +75,7 @@ public class EmployeeController {
 
     @RequestMapping(value = "/urlTest", method = RequestMethod.GET)
     @ResponseBody
-    public String getTextForUrl(String text){
+    public String getTextForUrl(String text) {
         String word = text;
         return text + " salom";
     }

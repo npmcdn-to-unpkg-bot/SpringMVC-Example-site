@@ -52,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index">Learn</a>
+            <a class="navbar-brand" href="/">Learn</a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
@@ -115,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
-                <li><a href="index">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li class="dropdown mega-dropdown active">
                     <div class="dropdown-menu mega-dropdown-menu">
                         <div class="container-fluid">
@@ -161,7 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="faq.html">Faq</a></li>
                     </ul>
                 </li>
-                <li><a href="Employee">User Action</a></li>
+                <li><a href="employee">User Action</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li class="last"><a href="contact.html">Contacts</a></li>
             </ul>
