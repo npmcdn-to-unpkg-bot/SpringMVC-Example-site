@@ -16,6 +16,7 @@ import java.util.List;
  * Created by root on 11/28/15.
  */
 @Controller
+@RequestMapping(value = "/employee")
 public class EmployeeController {
     @RequestMapping(value = "/urlSaveEmployee", method = RequestMethod.POST)
     @ResponseBody
@@ -66,5 +67,12 @@ public class EmployeeController {
         List list = new EmployeeDao().getDataList(text);
         Gson gson = new Gson();
         return gson.toJson(list, list.getClass());
+    }
+
+    @RequestMapping(value = "/urlTest", method = RequestMethod.GET)
+    @ResponseBody
+    public String getTextForUrl(String text){
+        String word = text;
+        return text + " salom";
     }
 }

@@ -46,7 +46,7 @@ public class RedirectController {
         return new ModelAndView("WEB-INF/pages/register");
     }
 
-    @RequestMapping(value = "/userAction", method = RequestMethod.GET)
+    @RequestMapping(value = "/Employee", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView userAction() {
         return new ModelAndView("WEB-INF/pages/UserAction");

@@ -161,7 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="faq.html">Faq</a></li>
                     </ul>
                 </li>
-                <li><a href="userAction">User Action</a></li>
+                <li><a href="Employee">User Action</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li class="last"><a href="contact.html">Contacts</a></li>
             </ul>
@@ -189,7 +189,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $('.events').append("<li>after event fired.</li>");
                 }
             });
-
         });
     </script>
     <!--//End-slider-script -->
