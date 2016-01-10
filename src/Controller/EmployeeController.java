@@ -44,7 +44,7 @@ public class EmployeeController {
         return gson.toJson(list, list.getClass());
     }
 
-    @RequestMapping(value = "/urlDeleteEmployee", method = RequestMethod.POST)
+    @RequestMapping(value = "/urlDeleteEmployee", method = RequestMethod.DELETE)
     @ResponseBody
     public String deleteEmployee(@RequestParam(value = "id") String id) {
         EmployeeDao dao = new EmployeeDao();
@@ -52,7 +52,7 @@ public class EmployeeController {
         return id;
     }
 
-    @RequestMapping(value = "/urlGetEmployee", method = RequestMethod.POST)
+    @RequestMapping(value = "/urlGetEmployee", method = RequestMethod.GET)
     @ResponseBody
     public String urlGetEmployee(@RequestParam(value = "id") Integer id) {
         EmployeeDao dao = new EmployeeDao();
@@ -61,7 +61,7 @@ public class EmployeeController {
         return gson.toJson(employee, employee.getClass());
     }
 
-    @RequestMapping(value = "/getData", method = RequestMethod.POST)
+    @RequestMapping(value = "/getData", method = RequestMethod.GET)
     @ResponseBody
     public String getData(@RequestParam(value = "text") String text) {
         List list = new EmployeeDao().getDataList(text);

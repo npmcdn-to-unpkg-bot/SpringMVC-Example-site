@@ -21,7 +21,7 @@ public class RedirectController {
         return new ModelAndView("WEB-INF/pages/login");
     }
 
-    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView index(@RequestParam(value = "log_username") String name, ModelMap modelMap) {
         System.out.println(name);
@@ -29,7 +29,7 @@ public class RedirectController {
         return new ModelAndView("/index");
     }
 
-    @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
+    @RequestMapping(value = "/checkLogin", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView checkLogin(HttpServletRequest request, HttpServletResponse response) {
         String log_username = request.getParameter("log_username");
@@ -40,7 +40,7 @@ public class RedirectController {
             return new ModelAndView("WEB-INF/pages/login");
     }
 
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView register() {
         return new ModelAndView("WEB-INF/pages/register");
