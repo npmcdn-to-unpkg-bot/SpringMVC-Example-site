@@ -1,6 +1,7 @@
 package Controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -47,6 +48,12 @@ public class RedirectController {
     @ResponseBody
     public ModelAndView userAction() {
         return new ModelAndView("WEB-INF/pages/UserAction");
+    }
+
+    @RequestMapping(value = "/angularJs", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView angularJs(){
+        return new ModelAndView("WEB-INF/pages/AngularJs");
     }
 }
 // session, cookie

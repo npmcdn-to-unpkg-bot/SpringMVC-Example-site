@@ -162,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </li>
                 <li><a href="employee">User Action</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/angularJs">Angular</a></li>
                 <li class="last"><a href="contact.html">Contacts</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
