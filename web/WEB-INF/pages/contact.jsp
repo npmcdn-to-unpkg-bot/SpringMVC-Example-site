@@ -1,9 +1,3 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -18,16 +12,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     function hideURLbar() {
         window.scrollTo(0, 1);
     } </script>
-    <link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css'/>
+    <link href="assets/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css'/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- Custom Theme files -->
-    <link href="css/style.css" rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="css/jquery.countdown.css"/>
-    <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/css/style.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="assets/css/jquery.countdown.css"/>
+    <link href='${pageContext.request.contextPath}//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700'
+          rel='stylesheet' type='text/css'>
     <!----font-Awesome----->
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!----font-Awesome----->
     <script>
         $(document).ready(function () {
@@ -55,22 +50,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Learn</a>
+            <a class="navbar-brand" href="/">Learn</a>
         </div>
         <!--/.navbar-header-->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="login.html"><i class="fa fa-user"></i><span>Login</span></a>
+                    <a href="/login"><i class="fa fa-user"></i><span>Login</span></a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="fa fa-list"></i><span>Courses</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="courses.html">Courses Categories</a></li>
-                        <li><a href="courses.html">Courses list</a></li>
-                        <li><a href="courses.html">Courses detail</a></li>
-                    </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar"></i><span>Events</span></a>
@@ -120,7 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li class="dropdown mega-dropdown active">
                     <div class="dropdown-menu mega-dropdown-menu">
                         <div class="container-fluid">
@@ -171,9 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="faq.html">Faq</a></li>
                     </ul>
                 </li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="last"><a href="contact.html">Contacts</a></li>
+                <li class="last"><a href="#">Contacts</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
@@ -190,7 +178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <div class="breadcrumb1">
             <ul>
-                <li class="icon6"><a href="index.html">Home</a></li>
+                <li class="icon6"><a href="/">Home</a></li>
                 <li class="current-page">Contact</li>
             </ul>
         </div>
@@ -242,20 +230,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-6 grid_6">
                 <input type="text" class="text" value="Name" placeholder="name" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Name';}">
+                       onblur="if (this.value == '') {this.value = 'Name';}" name="name" id="name">
                 <input type="text" class="text" value="Email" placeholder="email" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Email';}">
+                       onblur="if (this.value == '') {this.value = 'Email';}" name="email" id="email">
                 <input type="text" class="text" value="Phone" placeholder="phone" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Phone';}">
+                       onblur="if (this.value == '') {this.value = 'Phone';}" name="phone" id="phone">
             </div>
 
             <div class="col-md-6 grid_6">
                 <textarea value="Message" placeholder="message" onfocus="this.value = '';"
-                          onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+                          onblur="if (this.value == '') {this.value = 'Message';}" name="message"
+                          id="message">Message</textarea>
             </div>
             <div class="clearfix"></div>
             <div class="btn_3">
-                <a href="#" class="more_btn" data-type="submit">Send message</a>
+                <a class="more_btn" data-type="submit" onclick="redFunction()" style="cursor: pointer">Send message</a>
             </div>
         </form>
 
@@ -340,5 +329,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
+<script>
+    function redFunction() {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+        var message = $('#message').val();
+        $.ajax({
+            url: 'contact/message',
+            data: {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            }, success: function (success) {
+                alert('success');
+            },
+            error: function (error) {
+                alert('error');
+            }
+        });
+    }
+</script>
 </body>
 </html>	

@@ -13,19 +13,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         window.scrollTo(0, 1);
     } </script>
     <link href="assets/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css'/>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Custom Theme files -->
     <link href="assets/css/style.css" rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="assets/css/jquery.countdown.css"/>
     <link rel="stylesheet" href="assets/css/flexslider.css"/>
     <link rel="stylesheet" href="assets/css/clndr.css"/>
     <link href='${pageContext.request.contextPath}//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700'
           rel='stylesheet' type='text/css'>
-    <!----font-Awesome----->
     <link href="assets/css/font-awesome.css" rel="stylesheet">
-    <!----font-Awesome----->
     <script>
         $(document).ready(function () {
             $(".dropdown").hover(
@@ -162,8 +158,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </li>
                 <li><a href="employee">User Action</a></li>
-                <li><a href="/angularJs">Angular</a></li>
-                <li class="last"><a href="contact.html">Contacts</a></li>
+                <li><a href="/bookStory">Book Story</a></li>
+                <li class="last"><a href="contact">Contacts</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

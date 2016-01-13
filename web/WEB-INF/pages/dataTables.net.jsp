@@ -7,9 +7,9 @@
     <%--<script src="assets/js/bootstrap.js" type="application/javascript"></script>--%>
     <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/bootstrap.js"></script>
     <link href="${pageContext.request.contextPath}/assets/css/bootstrap-theme.css" rel="stylesheet"/>
-    <script src="assets/js/jquery.dataTables.min.js"></script>
-    <link href="assets/css/dataTables.min.css">
-    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="../../assets/js/jquery.dataTables.min.js"></script>
+    <link href="../../assets/css/dataTables.min.css">
+    <script src="../../assets/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 
