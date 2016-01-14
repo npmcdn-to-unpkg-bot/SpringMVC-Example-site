@@ -14,6 +14,11 @@ public class MessageDao {
     Session session;
     Transaction transaction;
 
+    public static void main(String[] args) {
+        int a = 15;
+        System.out.println(Integer.parseInt(a+"", 16));
+    }
+
     public Message saveMessage(Message message){
        session = configuration. configure().buildSessionFactory().openSession();
         transaction = session.beginTransaction();
