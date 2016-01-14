@@ -1,5 +1,6 @@
 package Controller;
 
+import EmployeeDAO.EmployeeDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,15 +28,16 @@ public class RedirectController {
         return new ModelAndView("/index");
     }
 
-    @RequestMapping(value = "/checkLogin", method = RequestMethod.GET)
+    @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
     @ResponseBody
     public ModelAndView checkLogin(HttpServletRequest request, HttpServletResponse response) {
         String log_username = request.getParameter("log_username");
         String log_password = request.getParameter("log_password");
-        if (log_username.equals("root") && log_password.equals("10"))
-            return new ModelAndView("/index");
-        else
-            return new ModelAndView("WEB-INF/pages/login");
+        EmployeeDao dao = new EmployeeDao();
+        String isYes = dao.UserType(log_username, log_password);
+        if(isYes.equals("root")) return new ModelAndView("WEB-INF/pages/admin");
+        else if(isYes.equals("yes")) return new ModelAndView("/index");
+        else return new ModelAndView("WEB-INF/pages/login");
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -60,6 +62,11 @@ public class RedirectController {
     @ResponseBody
     public ModelAndView contact(){
         return new ModelAndView("WEB-INF/pages/contact");
+    }
+    @RequestMapping(value = "translate")
+    @ResponseBody
+    public ModelAndView translate(){
+        return new ModelAndView("WEB-INF/pages/translate");
     }
 }
 // session, cookie

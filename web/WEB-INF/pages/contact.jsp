@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Learn an Education Category Flat Bootstarp Resposive Website Template | Contact :: w3layouts</title>
+    <title>Contact us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -50,32 +50,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Learn</a>
+            <a class="navbar-brand" href="/">Contac us</a>
         </div>
-        <!--/.navbar-header-->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="/login"><i class="fa fa-user"></i><span>Login</span></a>
+                    <a href="login"><i class="fa fa-user"></i><span>Admin</span></a>
                 </li>
+
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="fa fa-list"></i><span>Courses</span></a>
+                    <a href="login"><i class="fa fa-user"></i><span>Login</span></a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar"></i><span>Events</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="events.html">Event1</a></li>
-                        <li><a href="events.html">Event2</a></li>
-                        <li><a href="events.html">Event3</a></li>
-                    </ul>
-                </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="fa fa-globe"></i><span>English</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span><i class="flags us"></i><span>English</span></span></a></li>
-                        <li><a href="#"><span><i class="flags newzland"></i><span>Newzland</span></span></a></li>
+                        <li><a href="#"><span><i class="flags newzland"></i><span>Uzbek</span></span></a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -92,13 +84,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="clearfix"></div>
     </div>
-    <!--/.navbar-collapse-->
 </nav>
 <nav class="navbar nav_bottom" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header nav_2">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
                     data-target="#bs-megadropdown-tabs">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -116,31 +107,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="container-fluid">
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div class="tab-pane active" id="men">
-                                    <ul class="nav-list list-inline">
-                                        <li><a href="admission.html"><img src="images/t7.jpg" class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t8.jpg" class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t9.jpg" class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t1.jpg" class="img-responsive"
-                                                                          alt=""/></a></li>
-                                    </ul>
-                                </div>
+
                                 <div class="tab-pane" id="women">
                                     <ul class="nav-list list-inline">
-                                        <li><a href="admission.html"><img src="images/t1.jpg" class="img-responsive"
+                                        <li><a href="admission.html"><img src="assets/images/t1.jpg"
+                                                                          class="img-responsive"
                                                                           alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t2.jpg" class="img-responsive"
+                                        <li><a href="admission.html"><img src="assets/images/t2.jpg"
+                                                                          class="img-responsive"
                                                                           alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t3.jpg" class="img-responsive"
+                                        <li><a href="admission.html"><img src="assets/images/t3.jpg"
+                                                                          class="img-responsive"
                                                                           alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t4.jpg" class="img-responsive"
+                                        <li><a href="admission.html"><img src="assets/images/t4.jpg"
+                                                                          class="img-responsive"
                                                                           alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t5.jpg" class="img-responsive"
+                                        <li><a href="admission.html"><img src="assets/images/t5.jpg"
+                                                                          class="img-responsive"
                                                                           alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="images/t6.jpg" class="img-responsive"
+                                        <li><a href="admission.html"><img src="assets/images/t6.jpg"
+                                                                          class="img-responsive"
                                                                           alt=""/></a></li>
                                     </ul>
                                 </div>
@@ -153,19 +139,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </ul>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="terms.html">Terms of use</a></li>
-                        <li><a href="shortcodes.html">Shortcodes</a></li>
-                        <li><a href="faq.html">Faq</a></li>
-                    </ul>
-                </li>
-                <li class="last"><a href="#">Contacts</a></li>
+                <li><a href="/translate">Translate</a></li>
+                <li><a href="/bookStory">Book Story</a></li>
+                <li class="last"><a href="contact">Contacts</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
 </nav>
+
 <!-- banner -->
 <div class="courses_banner">
     <div class="container">

@@ -50,37 +50,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index">Learn</a>
+            <a class="navbar-brand" href="/">Login Page</a>
         </div>
-        <!--/.navbar-header-->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                    <a href="login"><i class="fa fa-user"></i><span>Admin</span></a>
+                </li>
+
                 <li class="dropdown">
                     <a href="login"><i class="fa fa-user"></i><span>Login</span></a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="fa fa-list"></i><span>Courses</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="courses.html">Courses Categories</a></li>
-                        <li><a href="courses.html">Courses list</a></li>
-                        <li><a href="courses.html">Courses detail</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar"></i><span>Events</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="events.html">Event1</a></li>
-                        <li><a href="events.html">Event2</a></li>
-                        <li><a href="events.html">Event3</a></li>
-                    </ul>
-                </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="fa fa-globe"></i><span>English</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span><i class="flags us"></i><span>English</span></span></a></li>
-                        <li><a href="#"><span><i class="flags newzland"></i><span>Newzland</span></span></a></li>
+                        <li><a href="#"><span><i class="flags newzland"></i><span>Uzbek</span></span></a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -97,13 +85,12 @@
         </div>
         <div class="clearfix"></div>
     </div>
-    <!--/.navbar-collapse-->
 </nav>
 <nav class="navbar nav_bottom" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header nav_2">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
                     data-target="#bs-megadropdown-tabs">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -115,38 +102,33 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
-                <li><a href="index">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li class="dropdown mega-dropdown active">
                     <div class="dropdown-menu mega-dropdown-menu">
                         <div class="container-fluid">
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div class="tab-pane active" id="men">
-                                    <ul class="nav-list list-inline">
-                                        <li><a href="admission.html"><img src="assets/images/t7.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t8.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t9.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t1.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
-                                    </ul>
-                                </div>
+
                                 <div class="tab-pane" id="women">
                                     <ul class="nav-list list-inline">
                                         <li><a href="admission.html"><img src="assets/images/t1.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
+                                                                          class="img-responsive"
+                                                                          alt=""/></a></li>
                                         <li><a href="admission.html"><img src="assets/images/t2.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
+                                                                          class="img-responsive"
+                                                                          alt=""/></a></li>
                                         <li><a href="admission.html"><img src="assets/images/t3.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
+                                                                          class="img-responsive"
+                                                                          alt=""/></a></li>
                                         <li><a href="admission.html"><img src="assets/images/t4.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
+                                                                          class="img-responsive"
+                                                                          alt=""/></a></li>
                                         <li><a href="admission.html"><img src="assets/images/t5.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
+                                                                          class="img-responsive"
+                                                                          alt=""/></a></li>
                                         <li><a href="admission.html"><img src="assets/images/t6.jpg"
-                                                                          class="img-responsive" alt=""/></a></li>
+                                                                          class="img-responsive"
+                                                                          alt=""/></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -158,17 +140,9 @@
                         </ul>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="terms.html">Terms of use</a></li>
-                        <li><a href="shortcodes.html">Shortcodes</a></li>
-                        <li><a href="faq.html">Faq</a></li>
-                    </ul>
-                </li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="last"><a href="contact.html">Contacts</a></li>
+                <li><a href="/translate">Translate</a></li>
+                <li><a href="/bookStory">Book Story</a></li>
+                <li class="last"><a href="contact">Contacts</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
@@ -185,7 +159,7 @@
 
         <div class="breadcrumb1">
             <ul>
-                <li class="icon6"><a href="index">Home</a></li>
+                <li class="icon6"><a href="/">Home</a></li>
                 <li class="current-page">Login</li>
             </ul>
         </div>
@@ -195,13 +169,13 @@
 <div class="courses_box1">
     <div class="container">
 
-        <form class="login" action="/checkLogin" id="formAction" method="post">
+        <form class="login" id="formAction" method="post" action="/checkLogin">
             <p class="lead">Welcome Registration Page </p>
             <span id="error" style="color: red; font-size: 20px"></span>
 
             <div class="form-group">
                 <input autocomplete="off" type="text" name="log_username" class="required form-control"
-                       placeholder="Username" id="log_username">
+                       placeholder="mail" id="log_username">
             </div>
             <div class="form-group">
                 <input autocomplete="off" type="password" class="password required form-control" placeholder="Password"
@@ -209,7 +183,7 @@
             </div>
             <div class="form-group">
                 <input type="checkbox" name="remember" value="true"> Remember Me
-                <input type="submit" class="btn btn-primary btn-lg1 btn-block" name="submit" value="Log In">
+                <input type="submit" class="btn btn-primary btn-lg1 btn-block" value="Log In">
             </div>
             <p>Don not have an account? <a href="register" title="Sign Up">Sign Up</a></p>
         </form>
@@ -295,21 +269,5 @@
         </div>
     </div>
 </div>
-<script>
-    $('#formAction').submit(function () {
-        if ($('#log_username').val() == '' || $('#log_password').val() == '') {
-            $("#error").text("Error while filling the area...!").show(1000).fadeOut(3000);
-            $('#log_username').val("");
-            $('#log_password').val("");
-            return false;
-        }
-        else {
-            $("#error").text("Validated...").show(1000);
-            $('#log_username').val("");
-            $('#log_password').val("");
-            return true;
-        }
-    });
-</script>
 </body>
 </html>

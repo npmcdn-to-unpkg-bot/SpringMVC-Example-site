@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Learn an Education Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+    <title>Learn English by heart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -48,36 +48,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Learn</a>
+            <a class="navbar-brand" href="/">Learn English</a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                    <a href="login"><i class="fa fa-user"></i><span>Admin</span></a>
+                </li>
+
                 <li class="dropdown">
                     <a href="login"><i class="fa fa-user"></i><span>Login</span></a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="fa fa-list"></i><span>Courses</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="courses.html">Courses Categories</a></li>
-                        <li><a href="courses.html">Courses list</a></li>
-                        <li><a href="course_detail.html">Courses detail</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar"></i><span>Events</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="events.html">Event1</a></li>
-                        <li><a href="events.html">Event2</a></li>
-                        <li><a href="events.html">Event3</a></li>
-                    </ul>
-                </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="fa fa-globe"></i><span>English</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span><i class="flags us"></i><span>English</span></span></a></li>
-                        <li><a href="#"><span><i class="flags newzland"></i><span>Newzland</span></span></a></li>
+                        <li><a href="#"><span><i class="flags newzland"></i><span>Uzbek</span></span></a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -149,15 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </ul>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="terms.html">Terms of use</a></li>
-                        <li><a href="shortcodes.html">Shortcodes</a></li>
-                        <li><a href="faq.html">Faq</a></li>
-                    </ul>
-                </li>
-                <li><a href="employee">User Action</a></li>
+                <li><a href="/translate">Translate</a></li>
                 <li><a href="/bookStory">Book Story</a></li>
                 <li class="last"><a href="contact">Contacts</a></li>
             </ul>
@@ -173,7 +154,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $(function () {
             // Slideshow 4
             $("#slider3").responsiveSlides({
-                auto: true,
                 pager: true,
                 nav: true,
                 speed: 500,

@@ -1,5 +1,6 @@
 package EmployeeDAO;
 
+import HashCode.MD5;
 import Model.Employee;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -85,5 +86,18 @@ public class EmployeeDao {
                 + "or upper(email) like '%" + text.toUpperCase() + "%'"
                 + "or upper(state) like '%" + text.toUpperCase() + "%'"
         ).list();
+    }
+    public String UserType(String name, String password){
+        session = configuration.configure().buildSessionFactory().openSession();
+        transaction = session.beginTransaction();
+        String pass = MD5.getMD5(password);
+        List list = session.createQuery("from Employee where email ='" + name + "' and email = '"+ pass + "'").list();
+
+        if (name.equals("root") && password.equals("10"))
+            return "root";
+        else if(list.size() > 0)
+            return "yes";
+          else
+            return "no";
     }
 }

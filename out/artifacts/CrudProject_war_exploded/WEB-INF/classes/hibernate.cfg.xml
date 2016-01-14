@@ -23,5 +23,6 @@
         <mapping class="Model.Employee"/>
         <mapping class="Model.Message"/>
         <mapping class="Model.Book"/>
+        <mapping class="Model.TranslateWord"/>
     </session-factory>
 </hibernate-configuration>
