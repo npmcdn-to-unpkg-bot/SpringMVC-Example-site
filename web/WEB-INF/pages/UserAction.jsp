@@ -246,7 +246,7 @@
         else {
             $('#load').show();
             $.ajax({
-                url: "urlSaveEmployee",
+                url: "/employee/urlSaveEmployee",
                 type: "POST",
                 data: {
                     hideId: hideId,
@@ -303,7 +303,7 @@
                             $('#load').hide();
                         }
                         else {
-                            alert("this email already occupied 11");
+                            alert("this email already occupied ");
                             $('#load').hide();
                         }
                     }
@@ -325,7 +325,7 @@
         var state = $('#state').val();
         $('#load').show();
         $.ajax({
-            url: 'urlListEmployee',
+            url: '/employee/urlListEmployee',
             data: 'POST',
             success: function (response) {
                 var obj = JSON.parse(response);
@@ -368,7 +368,7 @@
             callback: function (result) {
                 if (result) {
                     $.ajax({
-                        url: 'urlDeleteEmployee',
+                        url: '/employee/urlDeleteEmployee',
                         type: 'POST',
                         data: {
                             id: id
@@ -405,7 +405,7 @@
     function getEmployee(id) {
         $('#load').show();
         $.ajax({
-            url: 'urlGetEmployee',
+            url: '/employee/urlGetEmployee',
             type: 'POST',
             data: {
                 id: id
@@ -436,7 +436,7 @@
         if (text.length > 0) {
             $('#load').show();
             $.ajax({
-                url: 'getData',
+                url: '/employee/getData',
                 type: 'POST',
                 data: {
                     text: text
@@ -514,7 +514,7 @@
                                 "</tr>'";
                         $('#tableEmployee tbody').append(app);
                         c++;
-                    } 
+                    }
                 }
                 $('.page').remove();
                 var count = $('#tableEmployee tbody').children().length;
@@ -572,6 +572,3 @@
 </script>
 </body>
 </html>
-<%--
-sarvar.fayzulaev@finnetlimited.com
---%>

@@ -1,12 +1,12 @@
 package Controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,15 +21,13 @@ public class RedirectController {
         return new ModelAndView("WEB-INF/pages/login");
     }
 
-    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     @ResponseBody
-    public ModelAndView index(@RequestParam(value = "log_username") String name, ModelMap modelMap) {
-        System.out.println(name);
-        modelMap.addAttribute("name", name);
+    public ModelAndView index() {
         return new ModelAndView("/index");
     }
 
-    @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
+    @RequestMapping(value = "/checkLogin", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView checkLogin(HttpServletRequest request, HttpServletResponse response) {
         String log_username = request.getParameter("log_username");
@@ -40,16 +38,28 @@ public class RedirectController {
             return new ModelAndView("WEB-INF/pages/login");
     }
 
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView register() {
         return new ModelAndView("WEB-INF/pages/register");
     }
 
-    @RequestMapping(value = "/userAction", method = RequestMethod.GET)
+    @RequestMapping(value = "/employee", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView userAction() {
         return new ModelAndView("WEB-INF/pages/UserAction");
+    }
+
+    @RequestMapping(value = "/bookStory", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView bookStory(){
+        return new ModelAndView("WEB-INF/pages/bookStory");
+    }
+
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView contact(){
+        return new ModelAndView("WEB-INF/pages/contact");
     }
 }
 // session, cookie

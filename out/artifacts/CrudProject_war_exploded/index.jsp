@@ -13,19 +13,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         window.scrollTo(0, 1);
     } </script>
     <link href="assets/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css'/>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Custom Theme files -->
     <link href="assets/css/style.css" rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="assets/css/jquery.countdown.css"/>
     <link rel="stylesheet" href="assets/css/flexslider.css"/>
     <link rel="stylesheet" href="assets/css/clndr.css"/>
     <link href='${pageContext.request.contextPath}//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700'
           rel='stylesheet' type='text/css'>
-    <!----font-Awesome----->
     <link href="assets/css/font-awesome.css" rel="stylesheet">
-    <!----font-Awesome----->
     <script>
         $(document).ready(function () {
             $(".dropdown").hover(
@@ -52,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index">Learn</a>
+            <a class="navbar-brand" href="/">Learn</a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
@@ -115,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav nav_1">
-                <li><a href="index">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li class="dropdown mega-dropdown active">
                     <div class="dropdown-menu mega-dropdown-menu">
                         <div class="container-fluid">
@@ -161,9 +157,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="faq.html">Faq</a></li>
                     </ul>
                 </li>
-                <li><a href="userAction">User Action</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="last"><a href="contact.html">Contacts</a></li>
+                <li><a href="employee">User Action</a></li>
+                <li><a href="/bookStory">Book Story</a></li>
+                <li class="last"><a href="contact">Contacts</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
@@ -189,7 +185,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $('.events').append("<li>after event fired.</li>");
                 }
             });
-
         });
     </script>
     <!--//End-slider-script -->
