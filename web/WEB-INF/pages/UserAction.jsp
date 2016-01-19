@@ -24,7 +24,6 @@
             border: 1px solid #030504;
             border-collapse: collapse;
         }
-
         .modal-content {
             margin-top: 200px;
             width: 333px;

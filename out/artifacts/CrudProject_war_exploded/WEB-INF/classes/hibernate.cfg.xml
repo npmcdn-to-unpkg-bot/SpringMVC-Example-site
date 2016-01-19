@@ -24,5 +24,6 @@
         <mapping class="Model.Message"/>
         <mapping class="Model.Book"/>
         <mapping class="Model.TranslateWord"/>
+        <mapping class="Model.Company"/>
     </session-factory>
 </hibernate-configuration>
