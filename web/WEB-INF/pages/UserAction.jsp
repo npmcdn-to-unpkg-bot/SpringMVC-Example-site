@@ -246,7 +246,7 @@
     </div>
 </div>
 <script>
-    var data = new Map();
+        var data = new Map();
     $('#addButton').click(function () {
         $('#registerMenu').toggle(1000);
     });
@@ -452,6 +452,17 @@
         var text = $('#search').val();
         var test = false;
         $('.page').remove();
+//        $('#mySelectCompany').remove();
+//        $('#mySelectCompany2').remove();
+        var select = $('#mySelectCompany2:selected').text();
+        alert(select);
+//        $.ajax({
+//            url : 'getCompany',
+//            type : 'POST',
+//
+//        })
+
+
         if (text.length > 0) {
             $('#load').show();
             $.ajax({
@@ -504,6 +515,7 @@
         var bol = false;
         var countt = $('#tableEmployee tbody').children().length;
         var divided = $('#mySelect option:selected').text();
+        alert('sa');
         if (tex.length > 0) {
             $('#load').show();
             var c = 0;
