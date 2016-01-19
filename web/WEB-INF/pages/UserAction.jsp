@@ -107,6 +107,17 @@
         <h4>
             <b>REGISTRATION FORM</b>
         </h4>
+          <br>
+
+        <div class="input-group">
+            Select Company
+            <select class="form-control" id="mySelectCompany2" style="width: 194px">
+                <option>Google</option>
+                <option>Facebook</option>
+                <option>Twitter</option>
+                <option>Odnoklassniki</option>
+            </select>
+        </div>
 
         <form>
             <input type="text" id="hideId" name="hideId" hidden>
@@ -175,13 +186,13 @@
         </div>
         <nav class="navbar navbar-default" style="margin-bottom: 0">
             <div class="container-fluid">
-                <div class="navbar-header">
+                <div class="navbar-header" style="width: 1025px">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-2" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" style="display: inline">
+                <div class="collapset navbar-collapse" id="bs-example-navbar-collapse-2" style="display: inline">
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group" style="display: inline-flex">
                             <select class="form-control" id="mySelect">
@@ -191,12 +202,21 @@
                                 <option>100</option>
 
                                 <input type="text" class="form-control" placeholder="Search" id="search"
-                                       style="margin-left: 680px"
+                                       style="margin-left: 700px"
                                        autocomplete="off" oninput="getOfflineData()">
                             </select>
+
+                            <div class="form-group" style="display: inline-flex; margin-left: -700px">
+                                <select class="form-control" id="mySelectCompany">
+                                    <option>Google</option>
+                                    <option>Facebook</option>
+                                    <option>Twitter</option>
+                                    <option>Odnoklassniki</option>
+                                </select>
+                            </div>
                         </div>
                     </form>
-                </div>
+               </div>
             </div>
         </nav>
         <table id="tableEmployee" class="table table-striped table-bordered table-hover dataTable no-footer">
