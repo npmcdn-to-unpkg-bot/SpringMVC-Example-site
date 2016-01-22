@@ -68,5 +68,10 @@ public class RedirectController {
     public ModelAndView translate(){
         return new ModelAndView("WEB-INF/pages/translate");
     }
+
+    @RequestMapping(value = "/chat", method = RequestMethod.GET)
+    public ModelAndView chat(){
+        return new ModelAndView("WEB-INF/pages/chat");
+    }
 }
 // session, cookie

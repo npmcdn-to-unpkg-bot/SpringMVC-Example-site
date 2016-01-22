@@ -4,17 +4,16 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">create</property>
         <property name="hibernate.dialect">
             org.hibernate.dialect.PostgreSQLDialect
         </property>
         <property name="connection.url">
-            jdbc:postgresql://127.0.0.1:5432/postgres
+            jdbc:postgresql://127.0.0.1:5432/course
         </property>
         <property name="connection.driver_class">
             org.postgresql.Driver
         </property>
-        <property name="connection.pool_size">1</property>
         <property name="connection.username">
             postgres
         </property>
@@ -26,5 +25,7 @@
         <mapping class="Model.Book"/>
         <mapping class="Model.TranslateWord"/>
         <mapping class="Model.Company"/>
+        <mapping class="Model.Student"/>
+        <mapping class="Model.StudentAddress"/>
     </session-factory>
 </hibernate-configuration>
