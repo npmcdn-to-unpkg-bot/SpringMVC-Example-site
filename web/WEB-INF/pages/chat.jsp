@@ -141,8 +141,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </li>
                 <li><a href="/translate">Translate</a></li>
                 <li><a href="/bookStory">Book Story</a></li>
-                <li class="last"><a href="/contact">Contacts</a></li>
-                <li class="last"><a href="/chat">Chat</a></li>
+                <li><a href="/contact">Contacts</a></li>
+                <li class="last"><a href="/chat"> Online Chat</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
