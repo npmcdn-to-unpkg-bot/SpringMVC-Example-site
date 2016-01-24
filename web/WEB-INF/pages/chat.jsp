@@ -10,7 +10,7 @@
 </div>
 <div id="messages"></div>
 <script>
-var webSocket = new WebSocket("ws://localhost:8087/websocket");
+var webSocket = new WebSocket("ws://localhost:8087/Websocket/websocket");
 
     webSocket.onerror = function (event) {
         onError(event);
