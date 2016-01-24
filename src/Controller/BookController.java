@@ -27,15 +27,14 @@ public class BookController {
     public String upload(HttpServletRequest request) {
         MultipartHttpServletRequest filereq = (MultipartHttpServletRequest) request;
 
-
-        MultipartFile file = filereq.getFile("upload");
+        MultipartFile file = filereq.getFile("file");
         Map<String, String> status = new HashMap<>();
 
         if (!file.isEmpty()) {
             if (!file.getContentType().equals("image/jpeg")
                     || !file.getContentType().equals("image/jpg")
                     || !file.getContentType().equals("image/png")) {
-                String rootPath = request.getServletContext().getRealPath("/upload/");
+                String rootPath = request.getServletContext().getRealPath("/book/upload/");
                 File dir = new File(rootPath);
 
                 if (!dir.exists()) {
@@ -51,7 +50,7 @@ public class BookController {
                 try (BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile))) {
                     stream.write(file.getBytes());
                     status.put("img_id", filename);
-                    String url = "http://localhost:8085/";
+                    String url = "http://localhost:8087/";
                     status.put("url", url + filename);
                     Gson gson = new Gson();
                     return gson.toJson(status);

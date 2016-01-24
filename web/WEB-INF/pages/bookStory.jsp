@@ -20,9 +20,9 @@
     <b>Remember file type must be doc, pdf, djvu</b>
     <br>
     <br>
-   <span> File name <input type="text" class="form-control" name="fname" placeholder="Input file name" style="width: 200px"> </span>
+   <span> File name <input type="text" class="form-control" name="text" placeholder="Input file name" style="width: 200px"> </span>
     <br>
-   <span> <input type="file" placeholder="upload file" class="fa-upload" name="fileName">  </span>
+   <span> <input type="file" placeholder="upload file" class="fa-upload" name="file">  </span>
     <br>
     <input type="submit" class="btn" value="Ok" style="width:66px;">
 </form>
