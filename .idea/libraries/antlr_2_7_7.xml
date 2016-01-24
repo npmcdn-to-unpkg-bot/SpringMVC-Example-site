@@ -79,6 +79,7 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-portlet-4.2.3.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-websocket-4.2.3.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-ws.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.websocket-api-1.0-rc4.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/lib/antlr-2.7.7.jar!/" />
