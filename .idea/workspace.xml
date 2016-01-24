@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2afd9985-aed4-4996-8ede-12509981b323" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javax.websocket-api-1.0-rc4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Websocket.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/course_detail.jsp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/courses.jsp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/event_single.jsp" afterPath="" />
@@ -12,11 +10,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/shortcodes.jsp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/students.jsp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/terms.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dexter.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dexter.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/classes/Websocket.class" afterPath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/classes/Websocket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Websocket.class" afterPath="$PROJECT_DIR$/target/classes/Websocket.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/chat.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CrudProject_war_exploded/WEB-INF/pages/chat.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Websocket.java" afterPath="$PROJECT_DIR$/src/Websocket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/pages/chat.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/chat.jsp" />
     </list>
     <ignored path="CrudProject.iws" />
@@ -97,8 +95,18 @@
       <file leaf-file-name="chat.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/chat.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6547945">
-              <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.80273974">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTML5.js" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1534" column="0" selection-start-line="1534" selection-start-column="0" selection-end-line="1534" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,13 +116,13 @@
         <entry file="file://$PROJECT_DIR$/src/Websocket.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#792#793#0" expanded="true" />
+                <element signature="e#581#582#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -754,7 +762,6 @@
     <configuration default="false" name="TomTac" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.61" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8087/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="CrudProject:war exploded">
           <settings>
@@ -857,7 +864,7 @@
       <workItem from="1453490686650" duration="763000" />
       <workItem from="1453492110095" duration="1885000" />
       <workItem from="1453590054197" duration="66000" />
-      <workItem from="1453619643332" duration="6313000" />
+      <workItem from="1453619643332" duration="8928000" />
     </task>
     <task id="LOCAL-00001" summary="git">
       <created>1453212901043</created>
@@ -869,7 +876,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37723000" />
+    <option name="totallyTimeSpent" value="40338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-3" width="1370" height="748" extended-state="6" />
@@ -933,14 +940,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1286,21 +1285,29 @@
     <entry file="file://$PROJECT_DIR$/src/Websocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1534" column="0" selection-start-line="1534" selection-start-column="0" selection-end-line="1534" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/pages/chat.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6547945">
-          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.80273974">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding />
         </state>
       </provider>

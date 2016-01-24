@@ -1,3 +1,4 @@
+
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -14,8 +15,7 @@ public class Websocket {
     @OnMessage
     public void onMessage(String message, Session session) throws IOException, InterruptedException {
         System.out.println("User input : " + message);
-//        session.getBasicRemote().sendText("User : " + message);
-        session.getAsyncRemote().sendText("User : " + message);
+        session.getBasicRemote().sendText("User : " + message);
     }
 
     @OnOpen

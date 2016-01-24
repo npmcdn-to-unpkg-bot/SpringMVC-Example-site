@@ -12,10 +12,6 @@
 <script>
 var webSocket = new WebSocket("ws://localhost:8087/websocket");
 
-var support = "MozWebSocket" in window ? 'MozWebSocket' : ("WebSocket" in window ? 'WebSocket' : null);
-if (support == null) {
-    alert("Your browser doesn't support Websockets.");
-}
     webSocket.onerror = function (event) {
         onError(event);
     };
