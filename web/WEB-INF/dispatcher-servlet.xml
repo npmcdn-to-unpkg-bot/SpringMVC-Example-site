@@ -12,11 +12,6 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     <mvc:resources location="/assets/" mapping="/assets/**"/>
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
-    <!--<bean id="multipartResolver"-->
-          <!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>-->
-    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
-        <!--&lt;!&ndash;<property name="maxUploadSize" value="10000000000"/>&ndash;&gt;-->
-    <!--</bean>-->
     <bean id="jspViewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass"

@@ -92,22 +92,4 @@
             <version>1.3.2</version>
         </dependency>
     </dependencies>
-
-    <properties>
-        <spring.version>4.1.5.RELEASE</spring.version>
-    </properties>
-
-    <dependency>
-        <groupId>org.eclipse.jetty.websocket</groupId>
-        <artifactId>javax-websocket-server-impl</artifactId>
-        <version>9.3.7.v20160115</version>
-    </dependency>
-
-    <dependency>
-        <groupId>javax.websocket</groupId>
-        <artifactId>javax.websocket-api</artifactId>
-        <version>1.0</version>
-    </dependency>
-
-
 </project>
