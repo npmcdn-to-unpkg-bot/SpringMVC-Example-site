@@ -73,6 +73,11 @@ public class RedirectController {
     public ModelAndView chat(){
         return new ModelAndView("WEB-INF/pages/chat");
     }
+
+    @RequestMapping(value = "/angular", method = RequestMethod.GET)
+    public ModelAndView angular(){
+        return new ModelAndView("WEB-INF/pages/angular");
+    }
 }
 // session, cookie
 /*
