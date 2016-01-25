@@ -106,29 +106,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="container-fluid">
                             <!-- Tab panes -->
                             <div class="tab-content">
-
-                                <div class="tab-pane" id="women">
-                                    <ul class="nav-list list-inline">
-                                        <li><a href="admission.html"><img src="assets/images/t1.jpg"
-                                                                          class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t2.jpg"
-                                                                          class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t3.jpg"
-                                                                          class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t4.jpg"
-                                                                          class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t5.jpg"
-                                                                          class="img-responsive"
-                                                                          alt=""/></a></li>
-                                        <li><a href="admission.html"><img src="assets/images/t6.jpg"
-                                                                          class="img-responsive"
-                                                                          alt=""/></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                         <!-- Nav tabs -->
@@ -181,9 +158,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
                                 playmakers, these kicks are ready to stand out.
                             </p>
-                            <a href="courses.html"><i class="fa fa-thumbs-up icon_1"
-                                                      style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View
-                                Courses</a>
                         </div>
                     </div>
                 </div>
@@ -197,9 +171,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <p>Inspired by bold colors and matching up to football’s on-pitch
                                 playmakers, these kicks are ready to stand out.
                             </p>
-                            <a href="courses.html"><i class="fa fa-thumbs-up icon_1"
-                                                      style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View
-                                Courses</a>
                         </div>
                     </div>
                 </div>
@@ -213,9 +184,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
                                 playmakers, these Brasil’s kicks are ready to stand out.
                             </p>
-                            <a href="courses.html"><i class="fa fa-thumbs-up icon_1"
-                                                      style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View
-                                Courses</a>
                         </div>
                     </div>
                 </div>
@@ -229,9 +197,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <p>Inspired by bold colors and matching up to football’s on-pitch
                                 playmakers, these kicks are ready to stand out.
                             </p>
-                            <a href="courses.html"><i class="fa fa-thumbs-up icon_1"
-                                                      style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View
-                                Courses</a>
                         </div>
                     </div>
                 </div>
@@ -245,9 +210,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
                                 playmakers, these kicks Brasil’s are ready to stand out.
                             </p>
-                            <a href="courses.html"><i class="fa fa-thumbs-up icon_1"
-                                                      style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View
-                                Courses</a>
                         </div>
                     </div>
                 </div>
@@ -350,7 +312,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                     <p>It is a long established fact that a reader will be distracted by the readable
                                         content of a page when looking at its layout. <a href="#">Read More</a></p>
-                                    <img src="assets/images/t9.jpg" class="img-responsive" alt=""/>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -376,7 +337,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority
                                         have suffered alteration in some form <a href="#">Read More</a></p>
-                                    <img src="assets/images/t5.jpg" class="img-responsive" alt=""/>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -404,7 +364,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority
                                         have suffered alteration in some form <a href="#">Read More</a></p>
-                                    <img src="assets/images/t8.jpg" class="img-responsive" alt=""/>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -430,7 +389,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
                                         in a piece of classical Latin literature <a href="#">Read More</a></p>
-                                    <img src="assets/images/t2.jpg" class="img-responsive" alt=""/>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -459,7 +417,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <p>But I must explain to you how all this mistaken idea of denouncing pleasure and
                                         praising pain was born and I will give you a complete account of the system, and
                                         expound the actual teachings <a href="#">Read More</a></p>
-                                    <img src="assets/images/t7.jpg" class="img-responsive" alt=""/>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -486,7 +443,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna
                                         mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.
                                         Aenean lacinia bibendum nulla sed consectetur.... <a href="#">Read More</a></p>
-                                    <img src="assets/images/t4.jpg" class="img-responsive" alt=""/>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
