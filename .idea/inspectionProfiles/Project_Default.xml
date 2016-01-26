@@ -4,7 +4,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="16">
+          <list size="22">
             <item index="0" class="java.lang.String" itemvalue="href" />
             <item index="1" class="java.lang.String" itemvalue="image" />
             <item index="2" class="java.lang.String" itemvalue=")" />
@@ -21,6 +21,12 @@
             <item index="13" class="java.lang.String" itemvalue="g-repeat" />
             <item index="14" class="java.lang.String" itemvalue="ng-repeat" />
             <item index="15" class="java.lang.String" itemvalue="ng-filter" />
+            <item index="16" class="java.lang.String" itemvalue="ng-disabled" />
+            <item index="17" class="java.lang.String" itemvalue="ng-enabled" />
+            <item index="18" class="java.lang.String" itemvalue="ng-showhide1" />
+            <item index="19" class="java.lang.String" itemvalue="ng-show" />
+            <item index="20" class="java.lang.String" itemvalue="ng-hide" />
+            <item index="21" class="java.lang.String" itemvalue="ng-click" />
           </list>
         </value>
       </option>
