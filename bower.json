@@ -17,10 +17,15 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "1.11.1",
-    "masonry": "desandro/masonry#~4.0.0"
+    "angularjs": "1.4.5",
+    "bootstrap": "~3.0.0",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2",
+    "masonry": "desandro/masonry#~4.0.0",
+    "component": "~0.0.1"
   },
   "devDependencies": {
     "flexslider": "~2.6.0"
   }
 }
+// bower install component --save
