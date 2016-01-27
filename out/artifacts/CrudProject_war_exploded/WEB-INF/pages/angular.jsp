@@ -4,7 +4,6 @@
     <title>Angular Tutorial</title>
     <script src="assets/js/angular.js"></script>
     <script src="assets/js/angular.min.js"></script>
-    <script src="assets/js/angular1.js"></script>
     <script src="assets/js/testAngular/mainApp.js"></script>
     <script src="assets/js/testAngular/studentController.js"></script>
 </head>
@@ -35,18 +34,13 @@
     <p> Total click : {{clickCounter }} </p>
     <input type="button" ng-click="clickCounter = clickCounter + 1" value="Click me">
     <br>
-    <input type="button" ng-click="testClick()" value="Test click">
+    <input type="button"  value="Test click">
 </div>
 
 <div ng-app="mainApp" ng-controller="studentController">
-    <p> First Name : {{person.name}}</p>
-    <p> Last Name : {{person.last}}</p>
+
 </div>
 
-<form novalidate>
-    <input type="text" required>
-    <input type="submit" value="submit">
-</form>
 <script>
     angular.module("myapp",[]).controller("HelloController", function ($scope) {
         $scope.hello = [];
@@ -54,10 +48,13 @@
         $scope.hello.book = "Java";
     });
 
-    function testClick(){
-        alert('as');
-    }
-
+//    function studentController($scope, $http){
+//        var url = "/employee/urlListEmployee";
+//        $http.get(url).success(function (response) {
+//            var obj = JSON.parse(response);
+//            alert(obj);
+//        })
+//    }
 </script>
 </body>
 </html>
