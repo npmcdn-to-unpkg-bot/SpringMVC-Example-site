@@ -31,13 +31,13 @@ public class RedirectController {
     @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
     @ResponseBody
     public ModelAndView checkLogin(HttpServletRequest request, HttpServletResponse response) {
-        String log_username = request.getParameter("log_username");
-        String log_password = request.getParameter("log_password");
-        EmployeeDao dao = new EmployeeDao();
-        String isYes = dao.UserType(log_username, log_password);
-        if(isYes.equals("root")) return new ModelAndView("WEB-INF/pages/admin");
-        else if(isYes.equals("yes")) return new ModelAndView("/index");
-        else return new ModelAndView("WEB-INF/pages/login");
+//        String log_username = request.getParameter("log_username");
+//        String log_password = request.getParameter("log_password");
+//        EmployeeDao dao = new EmployeeDao();
+//        String isYes = dao.UserType(log_username, log_password);
+//        if(isYes.equals("root")) return new ModelAndView("WEB-INF/pages/admin");
+//        else if(isYes.equals("yes")) return new ModelAndView("/index");
+        return new ModelAndView("WEB-INF/pages/admin");
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
