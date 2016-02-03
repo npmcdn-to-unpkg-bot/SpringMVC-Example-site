@@ -1,6 +1,6 @@
 {
   "name": "SpringMVC",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "This is sample SpringMVC project",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/BahodirBoydedayev/Bower-Example.git"
   },
   "author": "Bahodir Boydedayev",
-  "license": "N/A",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/BahodirBoydedayev/Bower-Example/issues"
   }
