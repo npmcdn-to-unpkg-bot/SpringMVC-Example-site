@@ -277,8 +277,6 @@
                     state: state
                 },
                 success: function (response) {
-//                    alert('hideid = ' + hideId);
-//                    alert('res.id = ' + response.id);
                     if (response.id == hideId) {
                         var allTd = $('table tbody tr#' + response.id + " td");
                         if (response.id != undefined) {
@@ -296,6 +294,7 @@
                             alert("this email already occupied 10");
                             $('#load').hide();
                         }
+                        $('#load').hide();
                     }
                     else {
                         if (response.id != undefined) {
@@ -335,6 +334,7 @@
                 }
             })
         }
+        $('#load').hide();
     }
     function listEmployee() {
         $('table tbody tr').remove();
@@ -517,7 +517,6 @@
         var bol = false;
         var countt = $('#tableEmployee tbody').children().length;
         var divided = $('#mySelect option:selected').text();
-        alert('sa');
         if (tex.length > 0) {
             $('#load').show();
             var c = 0;

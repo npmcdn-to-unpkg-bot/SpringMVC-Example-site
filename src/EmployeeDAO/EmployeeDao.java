@@ -7,7 +7,6 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -57,17 +56,10 @@ public class EmployeeDao {
     public List listEmployee() {
         session = configuration.configure().buildSessionFactory().openSession();
         transaction = session.beginTransaction();
-        Employee employee = new Employee();
-        employee.setId(1);
-        employee.setFirstName("Bahodir");
-        employee.setLastName("Boydedayev");
-        employee.setEmail("bahodir9293@gmail.com");
-        employee.setMobile("+998943009394");
-        employee.setPassword("10");
-        employee.setState("Uzbekistan");
-        List<Employee> list = new ArrayList<>();
-        list.add(employee);
-        return list;
+        List list = session.createQuery("FROM Employee ").list();
+        transaction.commit();
+        session.close();
+        return  list;
     }
 
     public Employee getEmployee(Integer id) {

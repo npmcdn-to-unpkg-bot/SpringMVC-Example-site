@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping(value = "/employee")
 public class EmployeeController {
 
-    @RequestMapping(value = "/urlSaveEmployee", method = RequestMethod.GET)
+    @RequestMapping(value = "/urlSaveEmployee", method = RequestMethod.POST)
     @ResponseBody
     public Employee saveEmployee(@RequestParam(value = "hideId") String hideId, @RequestParam(value = "firstName") String firstName, @RequestParam(value = "lastName") String lastName,
                                  @RequestParam(value = "mobile") String mobile, @RequestParam(value = "email") String email,
