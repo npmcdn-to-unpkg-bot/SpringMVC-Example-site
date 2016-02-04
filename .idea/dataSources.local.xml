@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - postgres@localhost" uuid="ee5b7d76-cf74-4a7d-8859-b8cc391fd2f1">
+    <data-source name="PostgreSQL - employee@localhost" uuid="44f08315-88f5-4fd1-92a9-1a017470280e">
       <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
-      <schema-pattern>postgres.pg_catalog postgres.public</schema-pattern>
-      <default-schemas>postgres.public</default-schemas>
+      <schema-pattern>employee.pg_catalog employee.public</schema-pattern>
+      <default-schemas>employee.public</default-schemas>
     </data-source>
   </component>
 </project>
