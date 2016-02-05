@@ -457,7 +457,6 @@
 //        $('#mySelectCompany').remove();
 //        $('#mySelectCompany2').remove();
         var select = $('#mySelectCompany2:selected').text();
-        alert(select);
 //        $.ajax({
 //            url : 'getCompany',
 //            type : 'POST',
