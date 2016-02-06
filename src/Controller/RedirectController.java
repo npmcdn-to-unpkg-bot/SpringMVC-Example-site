@@ -49,7 +49,7 @@ public class RedirectController {
     @RequestMapping(value = "/employee", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView userAction() {
-        return new ModelAndView("WEB-INF/pages/UserAction");
+        return new ModelAndView("WEB-INF/pages/AngularUserAction");
     }
 
     @RequestMapping(value = "/bookStory", method = RequestMethod.GET)
@@ -80,24 +80,3 @@ public class RedirectController {
     }
 }
 // session, cookie
-/*
- *  <security:http auto-config="true">
-        <security:intercept-url pattern="/checkLogin" access="ROLE_USER"/>
-    </security:http>
-    <security:authentication-manager id="authenticationManager">
-      <security:authentication-provider>
-          <security:user-service >
-              <security:user name="root" authorities="ROLE_USER"/>
-          </security:user-service>
-      </security:authentication-provider>
-    </security:authentication-manager>
-
-        <filter>
-        <filter-name>springSecurityFilterChain</filter-name>
-        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>springSecurityFilterChain</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
- */

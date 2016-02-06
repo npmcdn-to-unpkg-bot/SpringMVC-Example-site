@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -107,17 +108,17 @@
         <h4>
             <b>REGISTRATION FORM</b>
         </h4>
-          <br>
+        <br>
 
-        <div class="input-group">
-            Select Company
-            <select class="form-control" id="mySelectCompany2" style="width: 194px">
-                <option>Google</option>
-                <option>Facebook</option>
-                <option>Twitter</option>
-                <option>Odnoklassniki</option>
-            </select>
-        </div>
+        <%--<div class="input-group">--%>
+        <%--Select Company--%>
+        <%--<select class="form-control" id="mySelectCompany2" style="width: 194px">--%>
+        <%--<option>Google</option>--%>
+        <%--<option>Facebook</option>--%>
+        <%--<option>Twitter</option>--%>
+        <%--<option>Odnoklassniki</option>--%>
+        <%--</select>--%>
+        <%--</div>--%>
 
         <form>
             <input type="text" id="hideId" name="hideId" hidden>
@@ -206,17 +207,17 @@
                                        autocomplete="off" oninput="getOfflineData()">
                             </select>
 
-                            <div class="form-group" style="display: inline-flex; margin-left: -700px">
-                                <select class="form-control" id="mySelectCompany">
-                                    <option>Google</option>
-                                    <option>Facebook</option>
-                                    <option>Twitter</option>
-                                    <option>Odnoklassniki</option>
-                                </select>
-                            </div>
+                            <%--<div class="form-group" style="display: inline-flex; margin-left: -700px">--%>
+                            <%--<select class="form-control" id="mySelectCompany">--%>
+                            <%--<option>Google</option>--%>
+                            <%--<option>Facebook</option>--%>
+                            <%--<option>Twitter</option>--%>
+                            <%--<option>Odnoklassniki</option>--%>
+                            <%--</select>--%>
+                            <%--</div>--%>
                         </div>
                     </form>
-               </div>
+                </div>
             </div>
         </nav>
         <table id="tableEmployee" class="table table-striped table-bordered table-hover dataTable no-footer">
@@ -237,8 +238,8 @@
         </table>
 
         <div class="div-page">
-            <a class="page-button other" id="prev">Previous</a>
-            <a class="page-button other" id="next">Next</a>
+            <%--<a class="page-button other" id="prev">Previous</a>--%>
+            <%--<a class="page-button other" id="next">Next</a>--%>
 
             <input type="button" id="addButton" name="Add" value="Add User" class="btn">
         </div>
@@ -246,7 +247,7 @@
     </div>
 </div>
 <script>
-        var data = new Map();
+    var data = new Map();
     $('#addButton').click(function () {
         $('#registerMenu').toggle(1000);
     });
@@ -454,15 +455,7 @@
         var text = $('#search').val();
         var test = false;
         $('.page').remove();
-//        $('#mySelectCompany').remove();
-//        $('#mySelectCompany2').remove();
         var select = $('#mySelectCompany2:selected').text();
-//        $.ajax({
-//            url : 'getCompany',
-//            type : 'POST',
-//
-//        })
-
 
         if (text.length > 0) {
             $('#load').show();
